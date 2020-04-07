@@ -16,12 +16,17 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from lists import views
+from django.http import HttpResponse
+
+def index(request):
+	return HttpResponse("<title>Tio Fani</title><h1>Tio Fani</h1>")
 
 urlpatterns = [
-       # url(r'^admin/', admin.site.urls),
-# url(r'^$', 'home', name='home'),
-url(r'^$', views.home_page, name='home'),
-# url(r'^admin/', include(admin.site.urls)),
+	#url(r'^$', 'home', name='home'),
+	#url(r'^$', views.home_page, name='home'),
+	url(r'^admin/', admin.site.urls),
+	url(r'^$', index),
 ]
+
 
 
