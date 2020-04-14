@@ -19,7 +19,7 @@ from lists import views
 from django.http import HttpResponse
 
 def index(request):
-	return HttpResponse("<title>Tio Fani</title><h1>Tio Fani</h1>")
+	return HttpResponse("<title>To-Do</title>")
 
 urlpatterns = [
 	#url(r'^$', 'home', name='home'),
